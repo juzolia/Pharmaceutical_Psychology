@@ -851,14 +851,7 @@ th {
   border-color: #7da8de;
   color: #fff;
 }
-html {
-  font-size: 20px;
-}
 
-body {
-  font-size: 1rem;
-  line-height: 1.9;
-}
 @supports selector(body:has(.section:target)) {
   body:has(.section:target) .section {
     display: none;
@@ -953,4 +946,12 @@ body {
   .tab {
     padding: 8px 10px;
   }
+}
+html {
+  font-size: 20px;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 1.9;
 }
