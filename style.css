@@ -881,268 +881,176 @@ th {
     padding: 9px 13px;
     font-size: 14px;
   }
-  .grid,
-  .twocol,
-  .region-list,
-  .domains,
-  .statgrid,
-  .path-buttons {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .grid > *,
-  .twocol > *,
-  .card {
-    min-width: 0;
-  }
-  .card {
-    padding: 15px;
-    border-radius: 16px;
-  }
-  .region-toolbar .search {
-    min-width: 0;
-    width: 100%;
-    flex-basis: 100%;
-  }
-  h1 {
-    font-size: clamp(26px, 7vw, 37px);
-  }
-  h2 {
-    font-size: 21px;
-  }
-  .art {
-    width: 100%;
-    height: auto;
-    max-height: none;
-  }
-  .tablewrap {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  table {
-    min-width: 560px;
-  }
-  .flow {
-    flex-wrap: wrap;
-  }
-  .path-btn,
-  .answer,
-  .filter,
-  .ghost,
-  .solid {
-    min-height: 44px;
-  }
-  svg text {
-    font-size: 13px;
-  }
-}
-@media (max-width: 380px) {
-  .shell {
-    padding-inline: 9px;
-  }
-  .card {
-    padding: 12px;
-  }
-  .tab {
-    padding: 8px 10px;
-  }
 }
 
-/* ===============================================
-   Mobile typography correction (November 2026)
-   Balanced Arabic reading sizes; preserve desktop
-   appearance and existing responsive stacking.
-   =============================================== */
-html {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-}
-@media screen and (max-width: 768px) {
+/* ==================================
+   TYPOGRAPHY - DESKTOP
+   ================================== */
+
+@media screen and (min-width: 769px) {
   body {
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 19px !important;
+    line-height: 1.85 !important;
   }
+
+  /* Main headings */
   h1 {
-    font-size: clamp(28px, 7vw, 36px);
-    line-height: 1.4;
+    font-size: 42px !important;
+    line-height: 1.35 !important;
   }
+
   h2 {
-    font-size: 23px;
-    line-height: 1.5;
+    font-size: 30px !important;
+    line-height: 1.4 !important;
   }
-  h3,
-  .function-explain h3 {
-    font-size: 19px;
-    line-height: 1.55;
+
+  h3 {
+    font-size: 23px !important;
+    line-height: 1.5 !important;
   }
-  header p,
+
+  /* Paragraphs */
   p,
   li {
-    overflow-wrap: break-word;
-  }
-  
-/* تكبير الخطوط على اللابتوب والكمبيوتر فقط */
-@media screen and (min-width: 769px) {
-
-  /* النصوص العامة */
-  body {
-    font-size: 20px;
-    line-height: 1.9;
+    font-size: 19px !important;
+    line-height: 1.85 !important;
   }
 
-  /* العناوين */
-  h1 {
-    font-size: clamp(40px, 4vw, 56px);
-  }
-
-  h2 {
-    font-size: 31px;
-  }
-
-  h3,
-  .function-explain h3 {
-    font-size: 25px;
-  }
-
-  /* النصوص داخل البطاقات */
+  /* Cards */
   .domain p,
   .region .body,
   .function-explain p {
-    font-size: 22px;
-    line-height: 1.9;
+    font-size: 22px !important;
+    line-height: 1.85 !important;
   }
 
-  /* العناوين داخل البطاقات */
-  .region summary b {
-    font-size: 24px;
+  .region summary b,
+  .domain h3 {
+    font-size: 21px !important;
   }
 
   .details-title {
-    font-size: 30px;
+    font-size: 28px !important;
   }
 
   .fact strong {
-    font-size: 17px;
+    font-size: 17px !important;
   }
 
-  /* النصوص الثانوية */
-  .small,
-  .note,
-  .domain .tiny {
-    font-size: 19px;
+  /* Tables */
+  table,
+  th,
+  td {
+    font-size: 17px !important;
+    line-height: 1.7 !important;
   }
 
-  /* الجداول */
-  table {
-    font-size: 20px;
-  }
-
-  /* أزرار التنقل والتفاعل */
+  /* Buttons */
   .tab,
   .path-btn,
   .filter,
   .answer,
-  .ghost,
-  .solid {
-    font-size: 18px;
+  button {
+    font-size: 17px !important;
   }
 
-  /* الملصقات */
-  .chip,
-  .pill {
-    font-size: 15px;
-  }
-
-  /* عناوين المعلومات والإحصائيات */
-  .stat b {
-    font-size: 23px;
-  }
-
-  /* أسئلة الاختبار */
-  .question {
-    font-size: 23px;
-  }
-}
-
-  .eyebrow {
-    font-size: 12px;
-  }
-  .chip,
-  .pill {
-    font-size: 12px;
-  }
+  /* Small text */
   .small,
   .note,
   .domain .tiny,
-  .foot {
-    font-size: 14px;
-    line-height: 1.75;
+  .chip,
+  .pill,
+  .eyebrow {
+    font-size: 21px !important;
+    line-height: 1.7 !important;
   }
+
+  /* Quiz */
+  .question {
+    font-size: 21px !important;
+  }
+}
+
+/* ==================================
+   TYPOGRAPHY - MOBILE
+   ================================== */
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+
+  h1 {
+    font-size: 30px !important;
+    line-height: 1.4 !important;
+  }
+
+  h2 {
+    font-size: 25px !important;
+  }
+
+  h3 {
+    font-size: 21px !important;
+  }
+
+  p,
+  li {
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+
+  /* Cards */
+  .domain p,
+  .region .body,
+  .function-explain p {
+    font-size: 19px !important;
+    line-height: 1.8 !important;
+  }
+
+  .region summary b,
+  .domain h3 {
+    font-size: 19px !important;
+  }
+
+  .details-title {
+    font-size: 23px !important;
+  }
+
+  .fact strong {
+    font-size: 16px !important;
+  }
+
+  /* Tables */
+  table,
+  th,
+  td {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* Buttons */
   .tab,
   .path-btn,
   .filter,
-  .ghost,
-  .solid,
-  .answer {
-    font-size: 15px;
-    line-height: 1.55;
+  .answer,
+  button {
+    font-size: 15px !important;
   }
-  .details-title {
-    font-size: 22px;
+
+  /* Small text */
+  .small,
+  .note,
+  .domain .tiny,
+  .chip,
+  .pill,
+  .eyebrow {
+    font-size: 18px !important;
+    line-height: 1.7 !important;
   }
-  .fact strong {
-    font-size: 14px;
-  }
-  .stat b {
-    font-size: 18px;
-  }
-  .flow span {
-    font-size: 15px;
-    padding: 9px 12px;
-  }
-  .region summary b {
-    font-size: 16px;
-  }
-  .region .body,
-  .domain p,
-  .function-explain p {
-    font-size: 16px;
-    line-height: 1.8;
-  }
+
+  /* Quiz */
   .question {
-    font-size: 19px;
-  }
-  .search {
-    font-size: 16px;
-  } /* avoids iOS Safari input zoom */
-  table {
-    font-size: 15px;
-  }
-  th,
-  td {
-    padding: 10px 11px;
-  }
-  .svg-label {
-    font-size: 13px;
-  }
-  .svg-sub {
-    font-size: 11px;
-  }
-}
-@media screen and (max-width: 390px) {
-  body {
-    font-size: 16px;
-  }
-  h1 {
-    font-size: 27px;
-  }
-  h2 {
-    font-size: 21px;
-  }
-  h3,
-  .function-explain h3 {
-    font-size: 18px;
-  }
-  .tab {
-    font-size: 14px;
+    font-size: 19px !important;
   }
 }
