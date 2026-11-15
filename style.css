@@ -851,7 +851,6 @@ th {
   border-color: #7da8de;
   color: #fff;
 }
-
 @supports selector(body:has(.section:target)) {
   body:has(.section:target) .section {
     display: none;
@@ -947,11 +946,119 @@ th {
     padding: 8px 10px;
   }
 }
-html {
-  font-size: 22px;
-}
 
-body {
-  font-size: 1.5rem;
-  line-height: 1.9;
+/* ===============================================
+   Mobile typography correction (November 2026)
+   Balanced Arabic reading sizes; preserve desktop
+   appearance and existing responsive stacking.
+   =============================================== */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  h1 {
+    font-size: clamp(28px, 7vw, 36px);
+    line-height: 1.4;
+  }
+  h2 {
+    font-size: 23px;
+    line-height: 1.5;
+  }
+  h3,
+  .function-explain h3 {
+    font-size: 19px;
+    line-height: 1.55;
+  }
+  header p,
+  p,
+  li {
+    overflow-wrap: break-word;
+  }
+  .eyebrow {
+    font-size: 12px;
+  }
+  .chip,
+  .pill {
+    font-size: 12px;
+  }
+  .small,
+  .note,
+  .domain .tiny,
+  .foot {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .tab,
+  .path-btn,
+  .filter,
+  .ghost,
+  .solid,
+  .answer {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .details-title {
+    font-size: 22px;
+  }
+  .fact strong {
+    font-size: 14px;
+  }
+  .stat b {
+    font-size: 18px;
+  }
+  .flow span {
+    font-size: 15px;
+    padding: 9px 12px;
+  }
+  .region summary b {
+    font-size: 16px;
+  }
+  .region .body,
+  .domain p,
+  .function-explain p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .question {
+    font-size: 19px;
+  }
+  .search {
+    font-size: 16px;
+  } /* avoids iOS Safari input zoom */
+  table {
+    font-size: 15px;
+  }
+  th,
+  td {
+    padding: 10px 11px;
+  }
+  .svg-label {
+    font-size: 13px;
+  }
+  .svg-sub {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 390px) {
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 27px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  h3,
+  .function-explain h3 {
+    font-size: 18px;
+  }
+  .tab {
+    font-size: 14px;
+  }
 }
