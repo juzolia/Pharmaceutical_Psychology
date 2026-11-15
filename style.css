@@ -1007,13 +1007,13 @@ html {
   .domain p,
   .region .body,
   .function-explain p {
-    font-size: 19px;
+    font-size: 22px;
     line-height: 1.9;
   }
 
   /* العناوين داخل البطاقات */
   .region summary b {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .details-title {
@@ -1028,12 +1028,12 @@ html {
   .small,
   .note,
   .domain .tiny {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   /* الجداول */
   table {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   /* أزرار التنقل والتفاعل */
