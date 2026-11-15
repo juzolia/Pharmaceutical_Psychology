@@ -979,6 +979,90 @@ html {
   li {
     overflow-wrap: break-word;
   }
+  
+/* تكبير الخطوط على اللابتوب والكمبيوتر فقط */
+@media screen and (min-width: 769px) {
+
+  /* النصوص العامة */
+  body {
+    font-size: 20px;
+    line-height: 1.9;
+  }
+
+  /* العناوين */
+  h1 {
+    font-size: clamp(40px, 4vw, 56px);
+  }
+
+  h2 {
+    font-size: 31px;
+  }
+
+  h3,
+  .function-explain h3 {
+    font-size: 25px;
+  }
+
+  /* النصوص داخل البطاقات */
+  .domain p,
+  .region .body,
+  .function-explain p {
+    font-size: 19px;
+    line-height: 1.9;
+  }
+
+  /* العناوين داخل البطاقات */
+  .region summary b {
+    font-size: 20px;
+  }
+
+  .details-title {
+    font-size: 30px;
+  }
+
+  .fact strong {
+    font-size: 17px;
+  }
+
+  /* النصوص الثانوية */
+  .small,
+  .note,
+  .domain .tiny {
+    font-size: 17px;
+  }
+
+  /* الجداول */
+  table {
+    font-size: 18px;
+  }
+
+  /* أزرار التنقل والتفاعل */
+  .tab,
+  .path-btn,
+  .filter,
+  .answer,
+  .ghost,
+  .solid {
+    font-size: 18px;
+  }
+
+  /* الملصقات */
+  .chip,
+  .pill {
+    font-size: 15px;
+  }
+
+  /* عناوين المعلومات والإحصائيات */
+  .stat b {
+    font-size: 23px;
+  }
+
+  /* أسئلة الاختبار */
+  .question {
+    font-size: 23px;
+  }
+}
+
   .eyebrow {
     font-size: 12px;
   }
