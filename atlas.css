@@ -1,0 +1,15 @@
+/* Additive styles for new transmitter pages; original style.css stays unchanged */
+.nt-figure{width:100%;height:auto;display:block;max-height:370px;margin:14px auto}
+.nt-nav{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 17px;padding:12px 0 15px;border-bottom:1px solid var(--line)}
+.nt-navlink{display:inline-flex;align-items:center;text-decoration:none;border:1px solid #3c526e;border-radius:999px;background:#1b2a3f;color:#dbe9fa;padding:7px 13px;font-size:16px!important;line-height:1.6}
+.nt-navlink[aria-current="page"]{background:#315785;border-color:var(--nt-accent,#8eafe5);color:#fff}
+.nt-navlink:hover{border-color:#a9caff}
+#circuitDetails .fact{overflow-wrap:anywhere}
+@media(max-width:768px){.nt-nav{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:thin}.nt-navlink{flex:0 0 auto;font-size:15px!important;padding:8px 12px}.nt-figure{max-height:none}.region-list,.twocol,.grid,.domains,.path-buttons{grid-template-columns:minmax(0,1fr)}.card{min-width:0} }
+
+/* Serotonin educational map: horizontal scrolling prevents tiny labels on phones */
+.serotonin-map-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;border-radius:16px}
+.serotonin-map{min-width:690px;max-height:none!important}
+.serotonin-map-link{cursor:pointer;outline-offset:4px}
+.serotonin-map-link:hover rect,.serotonin-map-link:focus-visible rect{stroke-width:3;filter:brightness(1.24)}
+@media(max-width:768px){.serotonin-map{width:690px;min-width:690px}.serotonin-map-scroll{scrollbar-width:thin}}
