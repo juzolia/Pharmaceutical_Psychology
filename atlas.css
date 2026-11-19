@@ -1,0 +1,288 @@
+/* Additive styles for new transmitter pages; original style.css stays unchanged */
+.nt-figure {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 370px;
+  margin: 14px auto;
+}
+.nt-nav {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin: 0 0 17px;
+  padding: 12px 0 15px;
+  border-bottom: 1px solid var(--line);
+}
+.nt-navlink {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  border: 1px solid #3c526e;
+  border-radius: 999px;
+  background: #1b2a3f;
+  color: #dbe9fa;
+  padding: 7px 13px;
+  font-size: 16px !important;
+  line-height: 1.6;
+}
+.nt-navlink[aria-current="page"] {
+  background: #315785;
+  border-color: var(--nt-accent, #8eafe5);
+  color: #fff;
+}
+.nt-navlink:hover {
+  border-color: #a9caff;
+}
+#circuitDetails .fact {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 768px) {
+  .nt-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+  .nt-navlink {
+    flex: 0 0 auto;
+    font-size: 15px !important;
+    padding: 8px 12px;
+  }
+  .nt-figure {
+    max-height: none;
+  }
+  .region-list,
+  .twocol,
+  .grid,
+  .domains,
+  .path-buttons {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .card {
+    min-width: 0;
+  }
+}
+
+/* Serotonin educational map: horizontal scrolling prevents tiny labels on phones */
+.serotonin-map-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border-radius: 16px;
+}
+.serotonin-map {
+  min-width: 690px;
+  max-height: none !important;
+}
+.serotonin-map-link {
+  cursor: pointer;
+  outline-offset: 4px;
+}
+.serotonin-map-link:hover rect,
+.serotonin-map-link:focus-visible rect {
+  stroke-width: 3;
+  filter: brightness(1.24);
+}
+@media (max-width: 768px) {
+  .serotonin-map {
+    width: 690px;
+    min-width: 690px;
+  }
+  .serotonin-map-scroll {
+    scrollbar-width: thin;
+  }
+}
+
+/* تعديلات المشرف: مدخل علمي وتصنيف واضح ومخططات مقروءة */
+.nt-classification {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.nt-tag {
+  font-size: 16px !important;
+  line-height: 1.6;
+  border: 1px solid #688bb2;
+  border-radius: 999px;
+  padding: 5px 13px;
+  color: #edf4ff;
+  background: #244364;
+}
+.nt-tag.muted-tag {
+  background: #1c344d;
+  color: #b9d5f0;
+}
+.nt-primer {
+  margin: 0 0 17px;
+  padding: 18px 20px;
+}
+.nt-primer h3 {
+  font-size: 22px !important;
+  margin-bottom: 9px;
+  color: #c7e7ff;
+}
+.nt-primer p {
+  font-size: 18px !important;
+  line-height: 1.85 !important;
+  margin: 8px 0;
+}
+.nt-classification-guide {
+  display: grid;
+  gap: 8px;
+  margin-top: 13px;
+  background: #20334a;
+  padding: 14px;
+  border: 1px solid #3a5a7b;
+  border-radius: 14px;
+  font-size: 17px;
+}
+.nt-classification-guide span {
+  display: block;
+}
+.nt-classification-guide small {
+  color: #adc9e2;
+  font-size: 14px;
+}
+.nt-map-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 15px;
+  margin: 12px auto;
+}
+.nt-map-scroll svg {
+  display: block;
+  margin: 0 auto;
+  max-height: none !important;
+}
+/* تكبير النصوص داخل الرسوم دون تغيير النصوص المحيطة بها */
+.nt-map-scroll svg text {
+  font-size: 18px !important;
+}
+.nt-map-scroll svg text[font-size="12"],
+.nt-map-scroll svg text[font-size="13"],
+.nt-map-scroll svg .svg-sub {
+  font-size: 15px !important;
+}
+.nt-map-scroll svg text[font-size="14"],
+.nt-map-scroll svg text[font-size="15"],
+.nt-map-scroll svg .svg-label {
+  font-size: 17px !important;
+}
+@media (max-width: 768px) {
+  .nt-primer {
+    padding: 14px;
+  }
+  .nt-primer p {
+    font-size: 17px !important;
+  }
+  .nt-map-scroll svg {
+    width: max-content !important;
+    min-width: 780px;
+    max-width: none !important;
+  }
+  .nt-map-scroll .serotonin-map {
+    min-width: 850px !important;
+  }
+  .nt-tag {
+    font-size: 15px !important;
+  }
+}
+
+/* Preserve readable diagram labels on narrow laptop panels as well as phones */
+.nt-map-scroll svg {
+  min-width: 780px !important;
+}
+.nt-map-scroll svg[viewbox="0 0 850 420"] {
+  min-width: 850px !important;
+}
+.nt-map-scroll svg[viewbox="0 0 900 440"] {
+  min-width: 900px !important;
+}
+.nt-map-scroll svg[viewbox="0 0 920 320"] {
+  min-width: 920px !important;
+}
+
+
+/* Refinement requested: slim neural connections, readable map typography,
+   and comfortably sized maps across desktop and mobile. Site typography remains untouched. */
+.nt-map-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.nt-map-scroll svg.nt-refined-figure {
+  display: block;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  height: auto !important;
+}
+.nt-map-scroll svg.nt-refined-figure text {
+  font-size: 17px !important;
+  font-weight: 600;
+}
+.nt-map-scroll svg.nt-refined-figure text[font-size="12"],
+.nt-map-scroll svg.nt-refined-figure text[font-size="13"],
+.nt-map-scroll svg.nt-refined-figure text[font-size="14"],
+.nt-map-scroll svg.nt-refined-figure .svg-sub {
+  font-size: 16px !important;
+}
+.nt-map-scroll svg.nt-refined-figure text[font-size="22"],
+.nt-map-scroll svg.nt-refined-figure text[font-size="23"],
+.nt-map-scroll svg.nt-refined-figure text[font-size="24"],
+.nt-map-scroll svg.nt-refined-figure text[font-size="25"] {
+  font-size: 20px !important;
+}
+/* Directly placed map labels remain legible over colored connections. */
+.nt-map-scroll svg.nt-refined-figure > text {
+  paint-order: stroke fill;
+  stroke: rgba(18, 31, 48, .75);
+  stroke-width: 2.2px;
+  stroke-linejoin: round;
+}
+/* Lines are subtle. Route hover/selection remains visible through original colors. */
+.nt-map-scroll svg.nt-refined-figure path[stroke-width="2.8"],
+.nt-map-scroll svg.nt-refined-figure line[stroke-width="2.8"] {
+  stroke-width: 2.8px;
+}
+.nt-figure-caption {
+  margin: 8px 0 16px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #354d66;
+  background: #17283d;
+  color: #c9dbed;
+  text-align: center;
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+}
+/* On phones, a gently scrollable diagram keeps its labels readable,
+   without forcing enormous arrow thickness or oversized overall visuals. */
+@media (max-width: 768px) {
+  .nt-map-scroll svg.nt-refined-figure {
+    width: 690px !important;
+    max-width: none !important;
+    min-width: 690px !important;
+  }
+  .nt-map-scroll svg.nt-refined-figure.serotonin-map,
+  .nt-map-scroll svg.nt-refined-figure[viewbox="0 0 900 374"],
+  .nt-map-scroll svg.nt-refined-figure[viewbox="0 0 920 282"] {
+    width: 760px !important;
+    min-width: 760px !important;
+  }
+}
+/* Dopamine pathways: make selected and inactive routes fine but distinct. */
+.nt-map-scroll svg.nt-refined-figure .route {
+  stroke-width: 3px !important;
+}
+.nt-map-scroll svg.nt-refined-figure .route.on {
+  stroke-width: 4px !important;
+}
+/* Keep dark text in serotonin's colored raphe labels. */
+.nt-map-scroll svg.nt-refined-figure text[fill="#182033"] {
+  fill: #182033;
+}
